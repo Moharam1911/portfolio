@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Admin Login</h1>
+  <input type="password" id="password" placeholder="Enter Password">
+  <button onclick="login()">Login</button>
+  <div id="banMessage" style="color:red; display:none; margin-top:10px;"></div>
+
+  <div id="adminSection" style="display:none; margin-top:20px;">
+    <h2>Manage CTFs</h2>
+    <input type="text" id="ctfTitle" placeholder="CTF Title">
+    <textarea id="ctfContent" placeholder="CTF Content"></textarea>
+    <button onclick="insertImage('ctfContent')">Insert Image</button>
+    <button onclick="addItem('ctfs','ctfTitle','ctfContent')">Add CTF</button>
+    <div id="adminCtfList"></div>
+
+    <h2>Manage Blogs</h2>
+    <input type="text" id="blogTitle" placeholder="Blog Title">
+    <textarea id="blogContent" placeholder="Blog Content"></textarea>
+    <button onclick="insertImage('blogContent')">Insert Image</button>
+    <button onclick="addItem('blogs','blogTitle','blogContent')">Add Blog</button>
+    <div id="adminBlogList"></div>
+
+    <h2>Manage Projects</h2>
+    <input type="text" id="projectTitle" placeholder="Project Title">
+    <textarea id="projectContent" placeholder="Project Content"></textarea>
+    <button onclick="insertImage('projectContent')">Insert Image</button>
+    <button onclick="addItem('projects','projectTitle','projectContent')">Add Project</button>
+    <div id="adminProjectList"></div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
