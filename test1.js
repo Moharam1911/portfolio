@@ -1,5 +1,5 @@
 
-function add(){
+function add(x,y){
     if(!isNaN(x) && !isNaN(y))
      {return x+y ; }
     else {
@@ -7,7 +7,7 @@ function add(){
     }
 }
 
-function sub(){
+function sub(x,y){
     if(!isNaN(x) && !isNaN(y))
         {return x-y ; }
        else {
@@ -16,7 +16,7 @@ function sub(){
    }  
 
 
-function mul(){
+function mul(x,y){
     if(!isNaN(x) && !isNaN(y))
         {return x*y ; }
        else {
@@ -24,7 +24,7 @@ function mul(){
        }
    }
 
-function div(){
+function div(x,y){
     
     if(!isNaN(x) && !isNaN(y))
         {    
@@ -56,16 +56,16 @@ let y = parseFloat(document.getElementById("in2").value) ;
 let o = document.getElementById("op").value ; 
 let Res = document.getElementById("res");
     if (o=="+"){
-          Res.innerHTML = add();
+          Res.innerHTML = add(x,y);
 
     }
   else if (o=="-") {
-        Res.innerHTML = sub();
+        Res.innerHTML = sub(x,y);
   }
   else if (o=="*"|| o=="x"|| o=="X") {
-    Res.innerHTML = mul();
+    Res.innerHTML = mul(x,y);
   }
   else if (o=="/") {
-    Res.innerHTML = div();
+    Res.innerHTML = div(x,y);
   }
 } 
